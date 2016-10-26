@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
 
-  resources :athletes
+  resources :athletes do
+    resources :competes
+  end
+
+  resources :events
+  resources :countries
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,6 +1,6 @@
-class CreateAthletes < ActiveRecord::Migration
+class CreateEvents < ActiveRecord::Migration
   def change
-    create_table :athletes do |t|
+    create_table :events do |t|
       t.string :name
 
       t.timestamps null: false
