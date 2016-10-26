@@ -1,5 +1,8 @@
 var React = require('react');
 var EventDropdown = require('./EventDropdown.jsx');
+var AthleteDropdown = require('./AthleteDropdown.jsx');
+var CountryDropdown = require('./CountryDropdown.jsx');
+var DescriptionBox = require('./DescriptionBox.jsx');
 
 var MainContainer = React.createClass({
 
@@ -8,6 +11,9 @@ var MainContainer = React.createClass({
       <div>
         <h2>Main Container</h2>
         <EventDropdown />
+        <AthleteDropdown />
+        <CountryDropdown />
+        <DescriptionBox />
       </div>
       )
   }
