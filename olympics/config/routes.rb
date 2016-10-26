@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
 
   resources :athletes do
-    resources :competes
+    get "competes" => "competes#index_athlete"
   end
 
-  resources :events
+  resources :events do
+    get "competes" => "competes#index_event"
+  end
   resources :countries
 
   # The priority is based upon order of creation: first created -> highest priority.
