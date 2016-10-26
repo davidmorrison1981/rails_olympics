@@ -1,11 +1,10 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-
-var CountryBox = require('./components/CountryBox.jsx')
+var MainContainer = require('./components/MainContainer.jsx')
 
 window.onload = function(){
   ReactDOM.render(
-    <CountryBox></CountryBox>,
+    <MainContainer/>,
     document.getElementById('app')
   );
 }
