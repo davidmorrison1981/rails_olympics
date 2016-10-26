@@ -5,7 +5,9 @@ var EventDropdown = React.createClass({
   render: function(){
     return(
       <div>
-        <h2>Event Dropdown</h2>
+        <select>
+          <option>Events Dropdown</option>
+        </select>
       </div>
       )    
   }

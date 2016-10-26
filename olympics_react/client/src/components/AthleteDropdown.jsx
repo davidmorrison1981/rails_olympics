@@ -3,9 +3,16 @@ var React = require('react');
 var AthleteDropdown = React.createClass({
 
   render: function(){
+   var name = this.props.athlete.map(function(athlete, index){
+     return <option key={index}>{athlete.name}</option>
+   })
+
     return(
       <div>
-        <h2>Athlete Dropdown</h2>
+        <select>
+          
+          {name}
+        </select>
       </div>
       )
   }
