@@ -7,7 +7,7 @@ var DescriptionBox = require('./DescriptionBox.jsx');
 var MainContainer = React.createClass({
 
   getInitialState: function(){
-    return{athletes: [], countries:[]}
+    return{athletes: [], countries:[], events: []}
 
   },
 
@@ -15,6 +15,9 @@ var MainContainer = React.createClass({
     var theThing = JSON.parse(data);
     if(keyName === 'athletes'){
       this.setState({athletes: theThing});
+    }
+    else if(keyName === "events"){
+      this.setState({events: theThing});
     }
     else{
           this.setState({countries: theThing});
@@ -24,6 +27,7 @@ var MainContainer = React.createClass({
   componentDidMount: function(){
    this.callApi('athletes');
    this.callApi('countries');
+   this.callApi('events');
 
 
   },
@@ -44,7 +48,7 @@ var MainContainer = React.createClass({
     return(
       <div>
         <h2>Main Container</h2>
-        <EventDropdown />
+        <EventDropdown event={this.state.events}/>
         <AthleteDropdown athlete={this.state.athletes}/>
         <CountryDropdown country={this.state.countries}/>
         <DescriptionBox />

@@ -3,10 +3,15 @@ var React = require('react');
 var EventDropdown = React.createClass({
 
   render: function(){
+
+    var name = this.props.event.map(function(event, index){
+      return <option key={index}>{event.name}</option>
+    })
+
     return(
       <div>
         <select>
-          <option>Events Dropdown</option>
+          {name}
         </select>
       </div>
       )    
